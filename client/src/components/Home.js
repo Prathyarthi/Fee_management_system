@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -53,7 +54,8 @@ function Home() {
 
   return (
     <>
-      {loading ? (
+      <Navbar/>
+      {/* {loading ? (
         // loading
         <svg
           aria-hidden="true"
@@ -131,11 +133,12 @@ function Home() {
               </svg>
             )}
           </button>
-        </>
+          </>
         // user details
-      )}
+            )}*/}
+      
     </>
   );
 }
 
-export default Home;
+export default Home; 

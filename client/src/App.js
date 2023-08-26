@@ -8,22 +8,28 @@ import SignUp from './components/SignUp';
 import ResetPassword from './components/ResetPassword';
 import ForgotPassword from './components/ForgotPassword';
 import PageNotFound from './components/PageNotFound';
+import About from './components/About';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App  h-[100vh]  flex justify-center items-center">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route
-          path="/reset-password/:resetPasswordToken"
-          element={<ResetPassword />}
-        />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </div>
+    <>
+      <div className="App  h-[100vh]  flex justify-center items-center">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route
+            path="/reset-password/:resetPasswordToken"
+            element={<ResetPassword />}
+          />
+          <Route path="*" element={<PageNotFound />} />
+          {/* <Route exact path="/" element={<Home />} /> */}
+          <Route exact path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
