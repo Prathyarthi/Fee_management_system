@@ -14,7 +14,7 @@ import Details from './components/Details';
 function App() {
   return (
     <>
-      <div className="App  h-[100vh]  flex justify-center items-center">
+      <div className="App  auto  flex justify-center items-center">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />

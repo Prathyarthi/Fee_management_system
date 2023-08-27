@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import './Home.css'
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -54,7 +55,7 @@ function Home() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       {loading ? (
         // loading
         <svg
@@ -85,12 +86,14 @@ function Home() {
               <span className="  text-orange-400 font-bold">
                 {userData.name}{" "}
               </span>
-              How are you?
+              How are you!
             </h2>
-            <p className=" text-orange-400 font-bold float-right">
+            {/* <p className=" text-orange-400 font-bold float-right">
               {userData.email}
-            </p>
+            </p> */}
           </div>
+
+          <img className='img1' src={require('./side.png')} alt="side img" />
           <button
             type="button"
             onClick={() => handleLogout()}
@@ -133,10 +136,10 @@ function Home() {
               </svg>
             )}
           </button>
-          </>
+        </>
         // user details
-            )}
-      
+      )}
+
     </>
   );
 }

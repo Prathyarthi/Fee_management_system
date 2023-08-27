@@ -29,6 +29,7 @@ nav {
 img {
     height: 44px;
     width: 80px;
+    border-radius: 50%;
 }
 
 nav ul li {

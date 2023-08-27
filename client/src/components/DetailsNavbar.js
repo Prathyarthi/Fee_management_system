@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 
-export default function Navbar() {
+export default function DetailsNavbar() {
     return (
         <>
             <div className="header">
@@ -10,9 +10,10 @@ export default function Navbar() {
                     <a href="/"><img src={require('./fms icon.png')} alt="fms img" /></a>
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="/about">ABOUT</a></li>
-                        <li><a href="/details">DETAILS</a></li>
-                        <li><a href="/help">HELP</a></li>
+                        <li><a href="#Admission">ADMISSION PROCEDURE</a></li>
+                        <li><a href="#cet">CET</a></li>
+                        <li><a href="#management">MANAGEMENT</a></li>
+                        <li><a href="#saf">SAF FEES</a></li>
                     </ul>
                     <div>
                         {/* <button className='bg-[#fff] px-3 py-0' onClick={Contact}>Contact Me!</button> */}
