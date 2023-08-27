@@ -1,45 +1,42 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom";
+import './Navbar.css'
 
 export default function Navbar() {
-    let location = useLocation();
-    React.useEffect(() => {
-        console.log(location.pathname);
-    }, [location]);
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">
-                        FMS
-                    </Link>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon" />
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link className={`nav-link ${location.pathname === "/" ? "active" : ""} `} aria-current="page" to="/">
-                                    Home
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""} `} to="/about">
-                                    About
-                                </Link>
-                            </li>
-                        </ul>
+            <div className="header">
+                <nav>
+                    {/* <h2 className='heading'><a href="/">FMS</a></h2> */}
+                    <a href="/"><img src={require('./fms icon.png')} alt="fms img" /></a>
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/about">ABOUT</a></li>
+                        <li><a href="/details">DETAILS</a></li>
+                        {/* <li><div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Choose Sem
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Semester 1</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 2</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 3</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 4</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 5</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 6</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 7</a></li>
+                                <li><a class="dropdown-item" href="#">Semester 8</a></li>
+                            </ul>
+
+                        </div>
+                        </li> */}
+                        <li><a href="/receipt">HELP</a></li>
+                    </ul>
+                    <div>
+                        {/* <button className='bg-[#fff] px-3 py-0' onClick={Contact}>Contact Me!</button> */}
+                        <button className='bg-[#ff7070] px-3 py-0'><a href="/contact">PAYMENT</a></button>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </>
     )
 }

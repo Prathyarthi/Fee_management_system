@@ -55,7 +55,7 @@ function Home() {
   return (
     <>
       <Navbar/>
-      {/* {loading ? (
+      {loading ? (
         // loading
         <svg
           aria-hidden="true"
@@ -135,7 +135,7 @@ function Home() {
           </button>
           </>
         // user details
-            )}*/}
+            )}
       
     </>
   );

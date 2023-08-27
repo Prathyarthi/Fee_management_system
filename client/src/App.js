@@ -9,7 +9,7 @@ import ResetPassword from './components/ResetPassword';
 import ForgotPassword from './components/ForgotPassword';
 import PageNotFound from './components/PageNotFound';
 import About from './components/About';
-import Navbar from './components/Navbar';
+import Details from './components/Details';
 
 function App() {
   return (
@@ -27,6 +27,8 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
           {/* <Route exact path="/" element={<Home />} /> */}
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/details" element={<Details />} />
+
         </Routes>
       </div>
     </>
